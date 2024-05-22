@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #87ceeb;
+    height: 100vh;
+    justify-content: center;
+}
+
+#startButton {
+    width: 200px; /* Adjust width to fit the image */
+    height: 60px; /* Adjust height to fit the image */
+    background: url('https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/play.png') no-repeat center center;
+    background-size: contain; /* Ensure the background is fully visible */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    margin-bottom: 20px;
+    outline: none; /* Remove default button outline */
+    transition: transform 0.2s; /* Add a transition for hover effect */
+}
+
+#startButton:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#gameContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background: url('https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/jungle.png') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the container */
+    border: 2px solid #000000;
+    overflow: hidden;
+    display: none;
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/monkey.png') no-repeat center center;
+    background-size: cover;
+}
+
+.platform {
+    position: absolute;
+    background-color: #8b4513;
+}
+
+.banana {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/bananas.png') no-repeat center center;
+    background-size: cover;
+}
+
+#messageContainer {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#sparkles {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9;
+}
+
+#touchControls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 400px;
+}
+
+#touchControls button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+}
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    opacity: 0;
+    animation: sparkle-fall 1s forwards;
+}
+
+@keyframes sparkle-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platformer Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="startButton"></button>
+    <div id="gameContainer" tabindex="0">
+      <div id="player"></div>
+      <div class="platform" style="bottom: 50px; left: 100px; width: 150px; height: 20px"></div>
+      <div class="platform" style="bottom: 150px; left: 300px; width: 100px; height: 20px"></div>
+      <div class="platform" style="bottom: 250px; left: 500px; width: 100px; height: 20px"></div>
+      <div class="banana" style="bottom: 70px; left: 150px"></div>
+      <div class="banana" style="bottom: 170px; left: 350px"></div>
+      <div class="banana" style="bottom: 270px; left: 550px"></div>
+    </div>
+    <div id="messageContainer">
+      <div id="levelMessage"></div>
+      <div id="sparkles"></div>
+    </div>
+    <div id="touchControls">
+      <button id="leftButton">Left</button>
+      <button id="jumpButton">Jump</button>
+      <button id="rightButton">Right</button>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bananaSound" src="https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/Voicy_Wow.mp3"></audio>
+    <audio id="jumpSound" src="https://cdn.glitch.global/82932109-8c43-4bb2-b846-9b7f8a68b5d3/Voicy_MARIO%20OOF.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
